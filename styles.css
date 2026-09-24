@@ -1959,10 +1959,6 @@ input, select {
 }
 
 @media (max-width: 1024px) {
-  .hero-slide__heading {
-    font-size: 40px;
-  }
-  
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2012,22 +2008,7 @@ input, select {
     font-size: 13px;
     white-space: nowrap;
   }
-  
-  .hero-slide {
-    min-height: 450px;
-  }
-  
-  .hero-slide__heading {
-    font-size: 32px;
-  }
-  
-  .hero-stats { display: none; }
-  
-  .hero-controls {
-    right: 20px;
-    bottom: 20px;
-  }
-  
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -2064,13 +2045,6 @@ input, select {
     grid-template-columns: 1fr;
   }
   
-  .hero-slide__heading {
-    font-size: 26px;
-  }
-  
-  .hero-slide__actions {
-    flex-direction: column;
-  }
   
   .footer__top {
     grid-template-columns: 1fr;
