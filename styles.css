@@ -1985,12 +1985,34 @@ input, select {
   .top-bar__right {
     display: none;
   }
-  
-  .main-header .container {
-    height: 64px;
-    gap: 16px;
+
+  .top-bar__left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .top-bar__item:not(:first-child) {
+    display: none;
   }
   
+  .main-header .container {
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    flex: 1;
+  }
+  
+  .search-bar {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+
   .search-bar__select {
     display: none;
   }
@@ -2001,12 +2023,21 @@ input, select {
   
   .nav-menu {
     overflow-x: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .nav-menu::-webkit-scrollbar {
+    display: none;
   }
   
   .nav-menu__link {
     padding: 14px 16px;
     font-size: 13px;
     white-space: nowrap;
+  }
+
+  .nav-cta {
+    display: none;
   }
 
   .products-grid {
@@ -2030,6 +2061,25 @@ input, select {
   .featured-banner__title {
     font-size: 26px;
   }
+
+  .products-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .products-toolbar__filters {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 8px;
+    flex-wrap: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .products-toolbar__filters::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-chip {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2045,8 +2095,27 @@ input, select {
     grid-template-columns: 1fr;
   }
   
-  
   .footer__top {
     grid-template-columns: 1fr;
+  }
+
+  .hero-slide__heading {
+    font-size: 32px;
+  }
+  
+  .scroll-top {
+    right: 20px;
+    bottom: 90px;
+  }
+  
+  .whatsapp-fab {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .whatsapp-fab svg {
+    width: 24px;
+    height: 24px;
   }
 }
