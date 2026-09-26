@@ -275,4 +275,29 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.head.appendChild(style);
 
+  // ===== MOBILE MENU TOGGLE =====
+  const navToggle = document.getElementById('nav-toggle');
+  const mainNav = document.getElementById('main-nav');
+  const navLinks = document.querySelectorAll('.nav-menu__link');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('is-open');
+    });
+
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('is-open');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mainNav.contains(e.target) && mainNav.classList.contains('is-open')) {
+        mainNav.classList.remove('is-open');
+      }
+    });
+  }
+
 });
